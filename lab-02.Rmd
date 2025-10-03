@@ -114,7 +114,17 @@ plastic_data_all_new
 
 ```{r Ex3, message = FALSE}
 # Write your code here to answer exercise 3
+ 
 
+plastic_data_all_3<-plastic_data_all %>%
+plastic_data_all%>% drop_na()  
+
+mutate(pct_mismanage_plastic_ocean = (mismanaged_plastic_ocean/mismanaged_plastic)*100) %>%
+
+  group_by(region)%>%
+summarise(md_pct=median(pct_mismanage_plastic_ocean,na.rm=FALSE))
+
+plastic_data_all_3
 
 
 ```
