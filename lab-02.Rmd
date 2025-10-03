@@ -1,13 +1,13 @@
 ---
 title: "Lab 02 - Global plastic waste"
-author: "Team Name: jialinLiu, Yin Ruan, User3, User4"
+author: "Team Name: jialinLiu, User2, User3, User4"
 date: "`r Sys.Date()`"
 output: html_document
 ---
 
 ### Load packages and data
 
-```{r load-packages, message=FALSE, warning=FALSE}
+```{r load-packages, message = FALSE, warning=FALSE}
 library(tidyverse)
 library(readxl)
 ```
@@ -117,7 +117,7 @@ plastic_data_all_new
  
 
 plastic_data_all_3<-plastic_data_all %>%
-plastic_data_all%>% drop_na()  
+ 
 
 mutate(pct_mismanage_plastic_ocean = (mismanaged_plastic_ocean/mismanaged_plastic)*100) %>%
 
